@@ -1,0 +1,20 @@
+a)
+Durante muitos anos, principalmente entre os intervalos do AI Winter houve dificuldade para montar modelo de aprendizado de máquina que fossem eficientes. Alguns dos motivos mais relevantes foi a ausência de base de dados robustas que pudessem suprir a necessidade das pesquisas. Além dos dados era necessário capacidade de processamento para pode analisá-los. O desenvolvimento da internet forneceu bases de dados gigantescas e o poder de processamento ganhou uma robustez suficiente para trabalhar com esses dados. Isso permitiu processar textos, imagens, vídeos e uma quantidade quase que infinita de dados. Essa capacidade permitiu que os modelos de aprendizado de máquina pudessem receber essas informações, trabalhar em cima delas e fornecer resultados relevantes. Uma ferramenta funcional.
+b) 
+Exemplos:
+– Detecção de imagem: onde os algoritmos de inteligência artificial são capazes de identificar o que está contido na imagem com base em seu treinamento, inclusive entender o contexto que aquela imagem reflete.
+– Previsão de vendas de uma imobiliária: com base em modelos de regressão é possível prever qual será a quantidade de vendas no ano.
+c)
+O aprendizado supervisionado trabalha principalmente com dados que são rotulados e passados para um modelo de aprendizado de máquina que fará o treinamento com um supervisor externo para resultados que são esperados. 
+– Conjunto de treinamento é o amontoado de dados que são analisados pelo modelo.
+– Conjunto de validação/teste são os dados usados para validar aquele modelo como eficiente ou não e saber se está acertando o seu objetivo.
+– Rótulos são as marcações nos dados, ou de outra forma: as variáveis alvo. São as variáveis que o modelo tenta buscar, o que lhe é definido desde o início.
+– Variáveis independentes são as features do modelo que são usadas para alcançar o resultado.
+– O modelo é o algoritmo que trabalhará com todos os dados, todas as variáveis e rótulos para tentar se obter um resultado satisfatório.
+– A exatidão é a capacidade do modelo de receber os dados, e as saídas serem resultados esperados dados no início do treinamento, de quantos dados acusados como corretos, quais realmente são.
+– Hold-out 80/20 é o balanceamento do modelo, deixando 80% dos dados para treinamento e 20% para validação/teste.
+– O cross-validation define quais dados realmente estão sendo acertados.
+d)
+Na classificação eu forneço uma sequência de dados para o modelo e ele deve achar uma semelhança entre essas classes. 
+Um exemplo seria a inserção de diversas imagens de animais onde o modelo deve juntar em grupos aqueles com maior similaridade, formando assim diferentes classes.
+Um problema de regressão trabalha frequentemente com sequências numéricas. Principalmente tentando encontrar uma solução com base em dados recorrentes. Por exemplo: tentar estipular qual será o montante de vendas de uma empresa X durante uma época do ano com base nos anos anteriores.
