@@ -1,4 +1,4 @@
-﻿##<1a>##
+﻿##<<1a>>##
 p(U) = 30/100 = 0,3
 p(ÑU) = 70/100 = 0,7
 
@@ -11,11 +11,11 @@ P(P|ÑU) = 10/0,7 = 14,2%
 P(A|U) = 8/0,3 = 26,6%
 P(A|ÑU) = 12/0,7 = 17,14%
 
-##<1b>##
+##<<1b>>##
 P(U|I&P) = [P(U)*P(I|U)] + [P(U)*P(P|U)] = 0,3*50 + 0,3*33,3 = 24,99%
 P(ÑU|I&P) = [P(ÑU)*P(I|ÑU)] + [P(U)*P(P|ÑU)] = 0,7*7,14 + 0,7*14,2 = 14,93*
 
-##<2a>##
+##<<2a>>##
 O ganho de informação se da quando se usa o calculo de entropia ao criar um novo nó ou seja, sera escolhido de acordo com o calculo a variável que naquele momento mostra um ganho de informação, como exemplo simples considere,
 
 Uma tabela de disponibilidade de dias para se jogar vólei onde nas colunas contem os dados:
@@ -69,5 +69,5 @@ h(joga) = 1,126 + 0,584 -0,072
 No caso a coluna tempo tem uma influencia naquela na escolha de jogar ou não
 h(joga) = 1,638
 
-##<2b>##
+##<<2b>>##
 O tamanho máximo da arvore para que não exceda e comece a gerar dados errôneos, e limitar o numero de atributos por nó para que se alcance um tamanho uniforme em cada nó.
