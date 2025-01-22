@@ -1,0 +1,47 @@
+﻿##<<1a>>##
+
+mu(mensagem urgente) = 30/100 = 0.3
+mn(mensagem não urgente) = 70/100 = 0.7
+i = imediatamente 
+p = problema
+a = atraso
+
+P(i) = 20/100 = 0.2
+P(p) = 20/100 = 0.2
+P(a) = 20/100 = 0.2
+
+P(i | mu) = 15/30 = 0.5
+P(p | mu) = 10/30 = 0.33
+P(a | mu) = 8/30 = 0.26
+
+P(i | mn) = 5/70 = 0.07 
+P(p| mn) = 10/70 = 0.14
+P(a| mn) = 12/70 = 0.17
+
+##<<1b>>##
+
+mu (mensagem urgente) 
+mn(mensagem não urgente)
+i (imediatamente) 
+p ( problema)
+a  (atraso)
+P(mu | i,p) = P(mu) * P(i|mu) *P(p|mu) / P(i) * P(p) = 0.3 * 0.5 * 0.33 / 0.2*0.2
+ = 1.23 aprox.
+P(mn | i,p) = P(mn) * P(i|mn)*P(p|mn) / P(i) * P(p) = 0.7 * 0.07*0.14/0.2*0.2 = 0.1715 aprox.
+
+##<<2a>>##
+
+Com o conceito de ganho de informação podemos escolher a melhor estratégia para nosso modelo de aprendizagem de maquina baseadas em quais variáveis nos darão maior ganho de informação possível.
+Exemplo: temos algumas vagas de emprego e queremos saber para qual vaga ir. Onde temos os seguintes valores [[distancia, cargo,salario,interesse],[longe,interessante,alto,sim],[longe,chato,baixo,não],
+[perto,interessante,baixo,sim],[longe,interessante,alto,sim],
+[perto,interessante,alto,sim],[perto,chato,baixo,não]]
+
+usando “interesse” teremos três amostras com “sim” e três de “não” e ficamos com s = 1/2 e n = 1/2, usando cargo:
+H(c | s) = - 3/3 * Log2(1/2) = -1 * (-1 ) = 1 
+H(c | n) = - 3/3 * Log2(1/2) = -1 *(-1) = 1
+já encontramos um valor de interesse muito bom para se utilizar. 
+
+
+##<<2b>>##
+
+utilizaria um critério de limites, para quando atingir aquele ponto, paramos e um critério que para quando tiver apenas um tipo de amostras, como por exemplo, um ramo só com “sim” e outro só com “não”. 

@@ -1,0 +1,114 @@
+##<<1A>>##
+
+Para calcular a probabilidade de uma mensagem ser urgente ou não urgente, segue aqui as probabilidades:
+
+P(Urgente) = 30/100 (que é o total de mensagens urgentes sobre o nosso total de mensagens especificado na questão)
+P(Não-Urgente) = 70/100 (que é o total de mensagens não urgentes sobre o nosso total de mensagens especificado na questão)
+
+Após isso, temos as probabilidades condicionais:
+
+P(Imediatamente | Urgente) = 15/30 (Total de mensagens que contem imediatamente sobre todas as palavras que são urgentes)
+P( Imediatamente | Não-Urgente) = 5/70 (Total de mensagens que contem imediatamente sobre todas as palavras que não são urgentes)
+
+P(Problema | Urgente) = 10/30
+P(Problema | Não Urgente) = 10/70
+
+P(Atraso | Urgente) = 8/30
+P(Atraso | Não-Urgente) = 12/70
+
+##<<1B>>##
+
+Para Urgente: 
+
+P(Urgente | Imediatamente, Problema) = (P(Urgente) * P(Imediatamente|Urgente) * P(Problema|Urgente)) / P(Problema) * P(Imediatamente) 
+
+Vamos calcular as probabilidades da seguinte maneira:
+
+P(Problema) = 20/100 (Soma da quantidade mensagens que contêm a palavra “problema” sobre o total de mensagens especificado na questão) 
+P(Imediatamente) = 20/100 (Soma da quantidade mensagens que contêm a palavra “imediatamente” sobre o total de mensagens especificado na questão)
+
+P(Urgente) = 30/100 (que é o total de mensagens urgentes sobre o nosso total de mensagens especificado na questão)
+P(Não-Urgente) = 70/100 (que é o total de mensagens não urgentes sobre o nosso total de mensagens especificado na questão)
+
+P(Imediatamente | Urgente) = 15/30 (Total de mensagens que contem imediatamente sobre todas as palavras que são urgentes)
+P( Imediatamente | Não-Urgente) = 5/70 (Total de mensagens que contem imediatamente sobre todas as palavras que não são urgentes)
+
+P(Problema | Urgente) = 10/30
+P(Problema | Não Urgente) = 10/70
+
+
+
+Simplificando o denominador e simplificando os valores fracionários, ficaria assim:
+
+P(Urgente | Imediatamente, Problema) = (0.3 * 0.5 * 0.33) = 0.0495
+
+Agora, realizando o cálculo para não-urgente:
+
+P(Não-Urgente | Imediatamente, Problema) = (P(Não-Urgente) * P(Imediatamente|Não-Urgente) * P(Problema|Não-Urgente)) / P(Problema) * P(Imediatamente) 
+
+Simplificando o denominador novamente, e substituindo os valores, ficaria da seguinte maneira:
+
+P(Não-Urgente | Imediatamente, Problema) = 0.7 * 0.07 * 0.14 = 0.00686
+
+
+Ou seja, utilizando o teorema de Bayes podemos classificar a mensagem como Urgente, já que ao comparar as duas probabilidades, vemos que:
+P(Urgente | Imediatamente, Problema) = 0.0495
+P(Não-Urgente | Imediatamente, Problema) = 0.00686
+
+P(Urgente | Imediatamente, Problema) > P(Não-Urgente | Imediatamente, Problema)
+0.0495 > 0.00686
+
+Então, a mensagem seria classificada como urgente.
+
+
+##<<2A>>##
+Para visualizarmos isso, 
+Hipoteticamente, digamos que tenhamos um problema: Uma tabela de informações contendo os jogos de vôlei que um grupo jogou ao decorrer da semana, e com isso eles queriam saber se é possível prever pelas partições dessa tabelas se haverá jogo ou não no dia.
+
+Digamos que a nossa entropia inicial, a nossa primeira ramificação seja joga ou não joga.
+Se em 14 jogos no total, 7 jogamos e 7 não jogamos, vamos calcular a entropia:
+
+A fórmula é:
+
+H(x) = -p1*log2(p1) -p2*log2(p2) …
+
+Onde os “p” se referem a probabilidade. Para ficar mais claro, vamos utilizar a fórmula com a partição unitária joga.
+
+P(Joga=sim) = 7/14 (Quantidade de vezes jogadas sobre o total de jogos, será o nosso p1)
+P(Joga=não) = 7/14 (Quantidade de vezes jogadas sobre o total de jogos, será o nosso p2)
+
+H(Joga) = -0.5*log2(0.5) -0.5 * log2(0.5) = 0.84
+
+Agora, vamos selecionar uma partição (uma ou um conjunto de colunas da nossa tabela) para compor o cálculo de entropia e ganho
+
+Digamos que iremos utilizar a coluna de Temperatura com 90 Fº para a nossa partição, então separaremos para o caso de Temperatura > 90 Fº e outro para Temperatura <= 90 Fº.
+
+Vamos dizer que de acordo com nossa tabela, nos dias em que jogaram e a temperatura estava acima de 90ºF foram 3 
+
+P(Temperatura  > 90 | Joga = Sim) = 3/7 (Total de dias que a temperatura estava acima de 90 sobre a quantidade de dias que teve jogo)
+P(Temperatura  > 90 | Joga = Não) = 4/7
+
+Vamos dizer que de acordo com nossa tabela, nos dias em que jogaram e a temperatura estava acima de 90ºF foram 5
+
+P(Temperatura  <= 90 | Joga = Sim) = 4/7 (Total de dias que a temperatura estava acima de 90 sobre a quantidade de dias que teve jogo)
+P(Temperatura  <= 90 | Joga = Não) = 3/7
+
+H(Temperatura > 90 ) = -0.42 * log2(0.42) -0.57 * log2(0.57)  
+H(Temperatura <= 90 ) = -0.57* log2(0.57) -0.57 * log2(0.42)  
+
+Após o computador realizar os cálculos, faremos o cálculo de Entropia para o conjunto S:
+H(S|Temperatura) = 7/14 (Total de Joga sim dividido pelo total de itens do conjunto) * H(Temperatura > 90) * 7/14 (Total de Joga nao dividido pelo total de itens do conjunto) * H(Temperatura <= 90 ) = -0.57* log2(0.57) -0.57 * log2(0.42)
+
+Após isso, só precisamos calcular o ganho, que vai se dar pela subtração da entropia inicial, menos o resultado do H(S|Temperatura).
+
+G(S|Temperatura) = 0.84 – H(S|Temperatura)
+
+Esse cálculo é importante para ramificar a nossa árvore e a quantidade do ganho vai ser referente ao quanto essa partição é importante para a resolução do nosso problema.
+
+##<<2B>>##
+
+Citarei vários critérios interessantes para serem usados de parada para árvore de decisão. 
+
+Quantidade de Filhos em um Nó: Podemos utilizar isso principalmente como ponto de parada, porque a quantidade de itens em um nó, além de gerar um gasto computacional alto, pode gerar uma quantidade de partições que podem prejudicar o nosso problema. Uma versão alternativa a essa seria também parar em quantidade x de níveis em uma árvore, os motivos são os mesmos.
+
+Pureza dos Nós: Se em minha árvore, a entropia dos itens do nó estão muito próximas, é um critério de parada porque cada item está muito similar, então as divisões dentro da árvore vão ficando redundante.

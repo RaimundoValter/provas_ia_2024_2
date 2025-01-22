@@ -1,0 +1,73 @@
+﻿##<1a>##
+p(U) = 30/100 = 0,3
+p(ÑU) = 70/100 = 0,7
+
+P(I|U) = 15/0,3 = 50%
+P(I|ÑU) = 5/0,7 = 7,14%
+
+P(P|U) = 10/0,3 = 33,3%
+P(P|ÑU) = 10/0,7 = 14,2%
+
+P(A|U) = 8/0,3 = 26,6%
+P(A|ÑU) = 12/0,7 = 17,14%
+
+##<1b>##
+P(U|I&P) = [P(U)*P(I|U)] + [P(U)*P(P|U)] = 0,3*50 + 0,3*33,3 = 24,99%
+P(ÑU|I&P) = [P(ÑU)*P(I|ÑU)] + [P(U)*P(P|ÑU)] = 0,7*7,14 + 0,7*14,2 = 14,93*
+
+##<2a>##
+O ganho de informação se da quando se usa o calculo de entropia ao criar um novo nó ou seja, sera escolhido de acordo com o calculo a variável que naquele momento mostra um ganho de informação, como exemplo simples considere,
+
+Uma tabela de disponibilidade de dias para se jogar vólei onde nas colunas contem os dados:
+-tempo: nublado, chuvoso, limpo, nublado, limpo, limpo, nublado, chuvoso
+-joga: joga, nãoJoga, joga, joga, nãoJoga, nãoJoga, joga, joga
+
+Agora temos que calcular a entropia principal ou seja da classe joga ou não joga:
+h(joga) = -p(joga)*log2(p(joga)) – p(joga)*log2(p(joga))
+h(nãoJoga) = -p(nãoJoga)*log2(p(nãoJoga)) – p(nãoJoga)*log2(p(nãoJoga))
+
+contando que temos uma proporção para quem joga = 5/3 e para quem nãoJoga = 3/5
+Substituindo,
+h(joga) = -5/3*log2(5/3) -5/3*log2(5/3)
+h(joga) = -1,666*0,736 -1,66*+0,736 
+h(joga) = -2,452 
+
+h(nãoJoga) = -3/5*log2(3/5) -3/5*log2(3/5)
+h(nãoJoga) = -0,6*-0,736 -0,6*-0,736 
+h(nãoJoga) = 0,8832
+
+h(joga|nãoJoga) = -h(joga) -(nãoJoga)
+h(joga|nãoJoga) = 2,452 -0,8832
+Assim a entropia de jogar fica,
+h(joga|nãoJoga) = 1,568 
+
+Agora para ver qual atributo mostra um ganho de informação, nesse caso tempo:
+h(nublado|joga) = -p(nublado|joga)*log2(p(nublado|joga) -p(nublado|nãoJoga)*log2(p(nublado|nãoJoga))
+h(nublado|joga) = -3/5*log2(3/5) -0/3*log2(0/3)
+h(nublado|joga) = -0,6*-0,736
+h(nublado|joga) = 0,4416
+
+h(chuvoso|joga) = -p(chuvoso|joga)*log2(p(chuvoso|joga) -p(chuvoso|nãoJoga)*log2(p(chuvoso|nãoJoga))
+h(chuvoso|joga) = -1/5*log2(1/5) -1/3*log2(1/3)
+h(chuvoso|joga) = -0,2*-2,32 -0,33*-1,58
+h(chuvoso|joga) = 0,464 +0,52
+h(chuvoso|joga) = 0,984
+
+h(limpo|joga) = -p(limpo|joga)*log2(p(limpo|joga) -p(limpo|nãoJoga)*log2(p(limpo|nãoJoga))
+h(limpo|joga) = -1/5*log2(1/4) -2/3*log2(2/3)
+h(limpo|joga) = -0,2*-2 -0,66*-0,58
+h(limpo|joga) = 0,4+1,24
+h(limpo|joga) = 1,64
+
+Agora comparamos com a entropia de jogar
+h(joga) = 1,568 -h(nublado|joga) +
+	1,568 -h(chuvoso|joga)
+	1,568 -h(limpo|joga)  
+h(joga) = 1,568 – 0,4416 + 1,568 – 0,984 + 1,568 – 1,64
+h(joga) = 1,126 + 0,584 -0,072
+
+No caso a coluna tempo tem uma influencia naquela na escolha de jogar ou não
+h(joga) = 1,638
+
+##<2b>##
+O tamanho máximo da arvore para que não exceda e comece a gerar dados errôneos, e limitar o numero de atributos por nó para que se alcance um tamanho uniforme em cada nó.

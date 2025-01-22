@@ -1,0 +1,28 @@
+##<<1A>>##
+          
+
+
+##<<1B>>##
+
+
+ 
+
+##<<2A>>##
+O conceito de ganhos de informações é usado para verificar quais atributos são relevantes ao problema por meio do calculo de entropia. A entropia é usado para calcular a aleatoriedade de variáveis aleatórias e diminuída da entropia da variável alvo para se obter o ganho de informação nesse atributo. 
+
+Em uma situação hipotética onde querem descobrir se vão jogar naquele dia baseado em uma tabela feitas dos dias ondes eles jogaram ou não dado a um conjunto de condições climáticas dos dias.
+Elevando em consideração que em 14 dias 9 foram dias em que eles jogaram  e 5 os que não jogaram é calculado a entropia da coluna joga onde, H(joga) = -9/14 x log2 (9/14) – 5/14 x log2 (5/14). 
+
+Se escolhermos por exemplo o atributo Clima para calcular a entropia levando em consideração que esse atributo é divido em três categorias (ensolarado, nublado e chuvoso) sendo a probabilidade de ensolarado ser 5/14, chuvoso ser 5/14 e nublado ser 4/14 iremos calcular a entropia de cada um quando eles jogam e não jogam para obter a entropia final do atributo clima. 
+
+H(joga/ensolarado) = - 3/5 x log2 (3/5) – 2/5 x log2 (2/5)
+H(joga/nublado) = - 4/4 x log2 (4/4) – 0
+H(joga/ chuvoso) = -3/5 x log2 (3/5) – 2/5 x log2 (2/5)
+
+H(joga/clima) = P(ensolarado) x H(joga/ensolarado)+ P(nublado) x H(joga/nublado) + P(chuvoso) x H(joga/ chuvoso).
+
+E por ultimo calcular o IG (ganho de informação) que é H(joga) - H(joga/clima).
+
+##<<2B>>##
+Profundidade da árvore 
+Homogeneidade de classes
