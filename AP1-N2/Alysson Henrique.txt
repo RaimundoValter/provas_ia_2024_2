@@ -1,0 +1,57 @@
+##<<1A>>##
+
+Probabilidade de mensagem urgente ( P(U) ) = 30/30+70 = 0,3
+Probabilidade de mensagem não urgente ( P(NU) ) = 70/30+70 = 0,7
+
+Probabilidade da palavra “imediatamente” P(IM) = 20/(30+70)
+Probabilidade da palavra “problema” P(P) = 20/(30+70)
+Probabilidade da palavra “atraso” P(A) = 20/(30+70)
+
+Probabilidade de mensagem urgente ter palavra “imediatamente” [ P(U|IM )  ] = 0,5
+Probabilidade de mensagem não urgente ter palavra “imediatamente” [ P(NU|IM)] = 0,07
+
+Probabilidade de mensagem urgente ter palavra “problema” [ P(U|P )  ] = 0,33
+Probabilidade de mensagem não urgente ter palavra “problema” [ P(NU|P)] = 0,14
+
+Probabilidade de mensagem urgente ter palavra “atraso” [ P(U|A )  ] = 0,26
+Probabilidade de mensagem não urgente ter palavra “atraso” [ P(NU|A)] = 0,17
+
+Probabilidade  de “imediatamente” estar em urgente = [ P(IM|U) ]
+
+P(IM|U) = P(IM)*P(U|IM) / P(U) = 0,33
+
+Probabilidade  de “imediatamente” não estar em urgente = [ P(IM|NU) ]
+
+ P(IM|NU) = P(IM)*P(NU|IM) / P(NU) = 0,02
+
+Probabilidade  de “problema” estar em urgente = [ P(P|U) ]
+
+P(P|U) = P(P) * P(U|P) / P(U) = 0,22
+
+Probabilidade  de “problema” não estar em urgente = [ P(P|NU) ]
+
+ P(P|NU) = P(P) * P(NU|P) / P(NU) = 0,04
+
+Probabilidade  de “atraso” estar em urgente = [ P(A|U) ]
+
+P(A|U) = P(A) * P(U|A) / P(U) = 0,17
+
+Probabilidade  de “atraso” não estar em urgente = [ P(A|U) ]
+
+P(A|NU) = P(A) * P(NU|A) / P(NU) = 0,04
+
+##<<1B>>##
+
+Probabilidade de mensagem que tem “imediatamente” e “problema” ser urgente = P(IM;P|U)
+
+P(IM;P|U) = P(IM|U)*P(P|U)*P(U) = 0,02
+
+Probabilidade de mensagem que tem “imediatamente” e “problema” não ser urgente = P(IM;P|NU)
+
+P(IM;P|NU) = P(IM|NU)*P(P|NU)*P(NU) = 0,00005
+
+##<<2A>>##
+O ganho de informação é utilizado para que determinar qual atributo ou partição é o mais adequado para ser um ponto de decisão da árvore, suponha hipoteticamente que existe um banco de dados sobre jogos de vólei  nesse conjunto temos uma tabela que marca se as pessoas jogaram ou não naquele dia, desses valores temos 8/14 joga e 6/14 não joga, outros dois atributos dessa tabela são , tempo =  [ nublado: 7/14 joga, limpo 7/14 joga ] e feriado = [ não: 0/14 joga, sim: 14/14 joga ], ao realizar os cálculos temos que a entropia inicial dada pelo calculo [ -(8/14)*log2(8/14)-(6/14)*log2(6/14) ] será aproximadamente 0,97, aplicando o método para calcular as entropias do atributo tempo = 1 e feriado = 0, podemos fazer o calculo do ganho de conhecimento para cada atributo subtraindo sua entropia da inicial e verificando que feriado é o atributo melhor para iniciar a árvore de decisão.
+
+##<<2B>>##
+Primeiro critério de parada seria determinar uma profundidade máxima para a árvore, outro critério de parada seria determinar um valor como limite de pureza ou entropia que uma folha pode obter e finalizar o processo de criação da árvore quando esse valor for atingido, esses dois métodos permitem gerar árvores de decisões mais eficientes pois impedem que elas se tornem desnecessariamente longas.
