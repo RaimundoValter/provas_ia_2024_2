@@ -1,0 +1,41 @@
+﻿##<<1A>>##
+De acordo com a questão, e considerando as mensagens urgentes (U) e as não urgentes (ÑU) assim como suas palavras: “imediatamente”(“I”), “problema” (“P”) e “atraso” (“A”), aqui está a seguinte solução:
+
+Mensagem contendo “imediatamente” ser urgente e não urgente:
+P(“I”|U) = 15/30 = 0.5
+P(“I”|ÑU) = 5/70 = 0.071428571
+
+Mensagem contendo “problema” ser urgente e não urgente:
+P(“P”|U) = 10/30 ≈ 0.3333
+P(“P”|ÑU) = 10/70 = 0.142857142
+
+Mensagem contendo “atraso” e ser urgente e não urgente:
+P(“A”|U) = 8/30 ≈ 0.2666
+P(“A”|ÑU) = 12/70 = 0.171428571
+
+##<<1B>>##
+
+Classificação da mensagem contendo “imediatamente” e “problema” como urgente:
+P(U|”I”&”P”) = 0.30 x 0.5 x 0.3333 / 0.15 x 0.1 = 0.03333
+
+Classificação da mensagem contendo “imediatamente” e “problema” como não urgente:
+P(ÑU|”I”&”P”) = 0.70 x 0.07114285 x 0.142857142 / 0.5 x 0.10 = 0.0231
+
+##<<2A>>##
+
+O ganho de informação, ou entropia funciona trabalhando e obtendo os menores graus de diferença entre os atributos de uma árvore de decisão. Ele trabalha estimando o grau de cada atributo.
+
+Vamos supor que temos uma tabela com o atributo vento, esse atributo pode ser “Sim” ou “Não”. Dependemos desse atributo para calcular a entropia. 5 são “Sim” e 7 “Não” para jogar basquete, totalizando 12 atributos.
+
+H(S) = -(5/12xlog2(5/12) – (4/12 x log2(4/12)
+H(S) = -(0.416666 x 1,1609) – (0.3333 x 0.1666)
+H(S) = −0,72593372
+
+Aqui conseguimos medir a entropia da influencia do vento na decisão de jogar ou não basquete naquele dia. 
+
+##<<2B>>##
+
+Para garantir um algoritmo eficiente em um modelo de decisão, posso usar dois critérios de parada. 
+Um deles é a profundidade da árvore que irá definir até que nível essa busca será feita, isso aumentará a eficiência impedindo que ela chegue a níveis de busca desnecessários e aumente o processamento. 
+
+Um outro atributo útil para garantir que tenhamos um critério de parada eficiente é a aplicação do monitoramento da homogeneidade, ou pureza das classes dentro do conjunto. Se em algum momento estes atributos assumem um valor muito próximo, não há motivo para que se continue e gaste poder de processamento atoa, assim será logo finalizado. 

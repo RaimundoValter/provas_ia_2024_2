@@ -1,0 +1,48 @@
+##<<1A>>##
+
+P(“Urgente”)  = 30/100 = 0.3
+P(“Não urgente”) = 70/100 = 0.7
+
+P(“imediatamente” | “Urgente”) = 15/20 = 0.75
+P(“problema” | “Urgente”) = 10/20 = 0.5
+P(“atraso” | “Urgente”) = 8/20  = 0.4
+
+P(“imediatamente” | “Não urgente”) = 5/20 = 0.25
+P(“problema” | “Não urgente”) = 10/20 = 0.5
+P(“atraso” | “Não urgente”) = 12/20 = 0.6
+
+
+##<<1B>>##
+
+P(“Urgente” |  “imediatamente “ & “problema ) = 
+P(“Urgente”) * P(“imediatamente” | “Urgente”) *  P(“problema” | “Urgente”)  
+
+Substituindo:  0.3 * 0.75 * 0.5 = 0.1125 
+
+P(“Não Urgente” |  “imediatamente “ & “problema ) = 
+P(“Não Urgente”) * P(“imediatamente” | “ Não Urgente”) * P(“problema” | “ Não Urgente”)
+
+Substituindo:  0.7 * 0.25 * 0.5 = 0.0875 
+
+A mensagem pode ser classificada como urgente. 
+
+
+##<<2A>>##
+
+O conceito de ganho de informação é utilizado em árvore de decisão para reduzir a entropia, ou grau de confusão nos dados. Ao selecionar determinada variável e realizar uma partição com nela, o ideia é que haja um ganho de informação e redução da entropia.
+
+Exemplo:
+Dado um conjunto de dados tabular que registra a ocorrência de idas a praia com 12 linhas, e com as variáveis independentes de temperatura, clima, força do vento, estado da maré entre outras e uma variável alvo “ida” que pode ser classificada como “foi” ou “não foi”.  Considere que dos 12 registros,  7 são classificados como “foi” e 5 como “não foi”. O cálculo de entropia antes da tomada de qualquer decisão se da por:
+
+Legenda:
+f = foi 
+nf = não foi
+
+-P(f)*log2(P(f) - P(nf)*log2(P(nf)) =  - 7/12*log2(7/12) – 5/12*log2(5/12) = 0.455 + 0.527 = 0.982
+
+
+Dado que por exemplo seleciona-se a variável de temperatura e cria-se uma partição com a condição temperatura > 28. Realiza-se novamente o cálculo de entropia, onde a temperatura foi maior que 28 e a ida foi classificada como “foi” e também como “não” foi o mesmo ocorre para quando a temperatura foi menor que 28. Ao final, somam-se as duas entropias e subtrai-se da entropia antes da tomada de qualquer decisão, calculando assim o ganho de informação
+
+##<<2B>>##
+
+Utilizaria os critérios de parada de nível da árvore, determinando um nível máximo onde a árvore deve parar de expandir, evitando com que a árvore de decisão fique muito extensa e o critério da pureza ou homogeneidade dos dados, onde os dados de determinado nó são da mesma classe. 
