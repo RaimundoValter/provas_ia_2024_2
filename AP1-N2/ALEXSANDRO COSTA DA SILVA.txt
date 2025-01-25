@@ -4,30 +4,30 @@ NU (Não urgente) – 70/100 = 0,7
 
 Probabilidades Condicionais:
 
-“imediatamente” = 20/100 = 0,2
-“problema” = 20/100 = 0,2
-“atraso” = 20/100 = 0,2
+"imediatamente" = 20/100 = 0,2
+"problema" = 20/100 = 0,2
+"atraso" = 20/100 = 0,2
 
-P(“imediatamente”|U) = 15/20 = 0,75
-P(“imediatamente”|NU) = 5/20 = 0,25
+P("imediatamente"|U) = 15/20 = 0,75
+P("imediatamente"|NU) = 5/20 = 0,25
 
-P(“problema”|U) = 10/20 = 0,5
-P(“problema”|NU) = 10/20 = 0,5
+P("problema"|U) = 10/20 = 0,5
+P("problema"|NU) = 10/20 = 0,5
 
-P(“atraso”|U) = 8/20 = 0,4
-P(“atraso”|NU) = 15/20 = 0,6
+P("atraso"|U) = 8/20 = 0,4
+P("atraso"|NU) = 15/20 = 0,6
 
 ##<<1B>>##
-P(U|”imediatamente”) = (0,3*0,75)/0,2 = 1,125
-P(NU|”imediatamente”) = (0,3*0,25)/0,2 = 0,375
+P(U|"imediatamente") = (0,3*0,75)/0,2 = 1,125
+P(NU|"imediatamente") = (0,3*0,25)/0,2 = 0,375
 
-P(U|”problema”) = (0,3*0,5)/0,2 = 0,75
-P(NU|”problema”) = (0,7*0,5)/0,2 = 1,75
+P(U|"problema") = (0,3*0,5)/0,2 = 0,75
+P(NU|"problema") = (0,7*0,5)/0,2 = 1,75
 
-P(U|”imediatamente” e ”problema”) = 0,3*1,125*0,75 = 0,25
-P(NU|”imediatamente” e ”problema”) = 0,7*0,375*1,75 = 0,46
+P(U|"imediatamente" e "problema") = 0,3*1,125*0,75 = 0,25
+P(NU|"imediatamente" e "problema") = 0,7*0,375*1,75 = 0,46
 
-A mensagem é classificada como “Não Urgente”, pois a maior probabilidade foi a de P(NU|”imediatamente” e ”problema”) = 0,46.
+A mensagem é classificada como "Não Urgente", pois a maior probabilidade foi a de P(NU|"imediatamente" e "problema") = 0,46.
 
 ##<<2A>>##
 Ganho de informação é o resultado da diferença da entropia inicial calculada para a entropia de alguma variável para melhorar o resultado da classificação. O exemplo hipotético seria para dizer se uma turma de pessoa pode jogar no dia, dando as variáveis como clima, vento, umidade e outras. Começando com o cálculo da entropia inicial, que seria contar todos os casos, separar os que de jogar são verdadeiros e os que são falsos com a seguinte formula H(Joga) = -P(verdadeiro)log2(P(verdadeiro)-P(falso)log2(P(falso)). Depois disso poderia ser analisado os casos em que estava ventando separar quando os casos verdadeiros e falsos e calcular a entropia de cada um para quando o Jogar for verdadeiro e falso com as seguintes formulas H(Joga| VentoVerdadeiro) = -P(JogaVerdadeiro)log2(JogaVerdadeiro)-P(JogaFalso)log2(JogaFalso) e H(Joga| VentoFalso) = -P(JogaVerdadeiro)log2(JogaVerdadeiro)-P(JogaFalso)log2(JogaFalso), depois de ter os dois resultados aplica-los na seguinte formula H(Vento) = P(VentoVerdadeiro)*H(Joga| VentoVerdadeiro)+P(VentoFalso)*H(Joga| VentoFalso) e com o resultado disso podemos calcular o ganho de informação usando H(Joga)-H(Vento).
