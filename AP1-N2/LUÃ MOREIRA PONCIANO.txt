@@ -1,39 +1,39 @@
 ##<<A1>>##                                                                   
 De acordo com os dados apresentados, uma mensagem qualquer tem uma chance de 0.3 (30%) de ser urgente. Em outras palavras, U = 70/100 e NU = 30/100. 
-Além disso, para as palavras apresentadas:
+AlÃ©m disso, para as palavras apresentadas:
 
-A chance da palavra imediatamente aparecer é 20/100, ou seja 0.2 (20%). No total, das 30 mensagens urgentes, 15 continham “Imediatamente”, ou seja UI = 15/30 ou 0.5 (50%). Em contrapartida das 70 mensagens não urgentes, apenas 5 continham essa palavra, ou seja NUI = 5/70 ou 0.07 (7%). Mensagens contendo a palavra “Imediatamente” tem uma chance de 0.75 (75%) de serem urgentes, com 0.25 (25%) de chance de serem não urgentes. Em outras palavras, tomando Imediatamente como “I”,  IU = 15/20 e INU = 5/20.
+A chance da palavra imediatamente aparecer Ã© 20/100, ou seja 0.2 (20%). No total, das 30 mensagens urgentes, 15 continham "Imediatamente", ou seja UI = 15/30 ou 0.5 (50%). Em contrapartida das 70 mensagens nÃ£o urgentes, apenas 5 continham essa palavra, ou seja NUI = 5/70 ou 0.07 (7%). Mensagens contendo a palavra "Imediatamente" tem uma chance de 0.75 (75%) de serem urgentes, com 0.25 (25%) de chance de serem nÃ£o urgentes. Em outras palavras, tomando Imediatamente como "I",  IU = 15/20 e INU = 5/20.
 
 
-A chance da palavra problema aparecer é 20/100, ou seja 0.2 (20%). No total das 30 mensagens urgentes, 10 continham problema, ou seja UP = 10/30 ou  0.33 (33%). Em contrapartida das 70 mensagens não urgentes, apenas 10/70 continham essa palavra, ou seja NUP = 10/70 ou 0.14 (14%). Mensagens contendo a palavra “Problema” tem uma chance de 0.5 (50%) de serem urgentes, com 0.5 (50%) de chance de não serem urgentes também. Em outras palavras, tomando Problema como “P”, PU = 10/20 e PNU = 10/20.
+A chance da palavra problema aparecer Ã© 20/100, ou seja 0.2 (20%). No total das 30 mensagens urgentes, 10 continham problema, ou seja UP = 10/30 ou  0.33 (33%). Em contrapartida das 70 mensagens nÃ£o urgentes, apenas 10/70 continham essa palavra, ou seja NUP = 10/70 ou 0.14 (14%). Mensagens contendo a palavra "Problema" tem uma chance de 0.5 (50%) de serem urgentes, com 0.5 (50%) de chance de nÃ£o serem urgentes tambÃ©m. Em outras palavras, tomando Problema como "P", PU = 10/20 e PNU = 10/20.
 
-A chance da palavra atraso aparecer é 20/100, ou seja 0.2(20%). No total das 30 mensagens urgentes, 8 continham atraso, ou seja UA = 8/30 ou 0.26 (26%). em contrapartida das 70 mensagens não urgentes, 12 mensagens de 70 tinham atraso, ou seja NUA = 12/70 ou 0.17 (17%). Mensagens contendo a palavra “Atraso” tem uma chance de apenas 0.4 (40%) de serem urgentes, com 0.6 (60%) de chance de não serem urgentes. Em outras palavras, tomando Atraso como “A”, AU = 8/20 e ANU = 12/20.
+A chance da palavra atraso aparecer Ã© 20/100, ou seja 0.2(20%). No total das 30 mensagens urgentes, 8 continham atraso, ou seja UA = 8/30 ou 0.26 (26%). em contrapartida das 70 mensagens nÃ£o urgentes, 12 mensagens de 70 tinham atraso, ou seja NUA = 12/70 ou 0.17 (17%). Mensagens contendo a palavra "Atraso" tem uma chance de apenas 0.4 (40%) de serem urgentes, com 0.6 (60%) de chance de nÃ£o serem urgentes. Em outras palavras, tomando Atraso como "A", AU = 8/20 e ANU = 12/20.
 
-Essas constatações foram possíveis com uma leitura simples dos dados apresentados.
+Essas constataÃ§Ãµes foram possÃ­veis com uma leitura simples dos dados apresentados.
 
 ##<<A2>>##
- P(U|”I”,”P”) = P(“I”|U) P(“P”|U) P(U) / P(“I”) P(“U”)
-P(U|”I”,”P”) = 0.5 x 0.33 x 0.3  / 0.2 x 0.2
-P(U|”I”, “P”) = 1.2375
+ P(U|"I","P") = P("I"|U) P("P"|U) P(U) / P("I") P("U")
+P(U|"I","P") = 0.5 x 0.33 x 0.3  / 0.2 x 0.2
+P(U|"I", "P") = 1.2375
 Urgente = 1.2375
 
- P(NU|”I”,”P”) = P(“I”|NU) P(“P”|NU) P(NU) / P(“I”) P(“P”)
-P(NU|”I”,”P”) = 0.25 x 0.5 x 0.7  / 0.2 x 0.2
-P(NU|”I”, “P”) = 2.1875
-Não urgente = 2.1875
+ P(NU|"I","P") = P("I"|NU) P("P"|NU) P(NU) / P("I") P("P")
+P(NU|"I","P") = 0.25 x 0.5 x 0.7  / 0.2 x 0.2
+P(NU|"I", "P") = 2.1875
+NÃ£o urgente = 2.1875
 
 
 ##<<B1>>##
-O ganho de informação serve para comparar dados na premissa de definir se a sua inclusão é valida ou não por virtude da similaridade com outros dados. Por exemplo: Se em uma tabela qualquer temos as colunas “Ventos fortes” e “Chuva” sendo associadas à linha de “Evento ocorreu” com uma classificação binária de “Sim” ou “Não” é valido verificar se há algum ganho por usar de ambas ou se elas são indicadores redundantes por sua similaridade.
+O ganho de informaÃ§Ã£o serve para comparar dados na premissa de definir se a sua inclusÃ£o Ã© valida ou nÃ£o por virtude da similaridade com outros dados. Por exemplo: Se em uma tabela qualquer temos as colunas "Ventos fortes" e "Chuva" sendo associadas Ã  linha de "Evento ocorreu" com uma classificaÃ§Ã£o binÃ¡ria de "Sim" ou "NÃ£o" Ã© valido verificar se hÃ¡ algum ganho por usar de ambas ou se elas sÃ£o indicadores redundantes por sua similaridade.
 
-Por mérito de exemplo, consideremos que na coluna de “Ventos fortes”, temos 6 sim e 4 não quando relacionado à “Evento ocorreu”, e da mesma forma em “Chuva” temos 5 sim e 5 não. Fazendo o calculo da entropia para encontrar o ganho:
+Por mÃ©rito de exemplo, consideremos que na coluna de "Ventos fortes", temos 6 sim e 4 nÃ£o quando relacionado Ã  "Evento ocorreu", e da mesma forma em "Chuva" temos 5 sim e 5 nÃ£o. Fazendo o calculo da entropia para encontrar o ganho:
 
 (-0.6log2(0.6)) = 0.4421
 (-0.5log2(0.5)) = 0.5
 0.4421 - 0.5 = 0.0579
 
-Pela proximidade do resultado à 0, podemos constatar que “Ventos fortes” e “Chuva” tem um ganho ruim, e seria viável ao sistema remover uma dessas variáveis.
+Pela proximidade do resultado Ã  0, podemos constatar que "Ventos fortes" e "Chuva" tem um ganho ruim, e seria viÃ¡vel ao sistema remover uma dessas variÃ¡veis.
 
 
 ##<<B2>>##
-De forma sucinta, o primeiro seria por comprimento da árvore, limitando o seu numero de passos por um valor arbitrário para impedir uma execução infinita. O outro seria por “pureza”, ou seja, o quão próximo de 0 se encontra a entropia, deixando que o processo seja executado até que se alcance uma entropia mínima desejada sem deixar que continue com uma execução desnecessária.
+De forma sucinta, o primeiro seria por comprimento da Ã¡rvore, limitando o seu numero de passos por um valor arbitrÃ¡rio para impedir uma execuÃ§Ã£o infinita. O outro seria por "pureza", ou seja, o quÃ£o prÃ³ximo de 0 se encontra a entropia, deixando que o processo seja executado atÃ© que se alcance uma entropia mÃ­nima desejada sem deixar que continue com uma execuÃ§Ã£o desnecessÃ¡ria.
