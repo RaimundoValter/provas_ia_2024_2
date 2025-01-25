@@ -24,8 +24,8 @@ P(Urgente | Imediatamente, Problema) = (P(Urgente) * P(Imediatamente|Urgente) * 
 
 Vamos calcular as probabilidades da seguinte maneira:
 
-P(Problema) = 20/100 (Soma da quantidade mensagens que contêm a palavra “problema” sobre o total de mensagens especificado na questão) 
-P(Imediatamente) = 20/100 (Soma da quantidade mensagens que contêm a palavra “imediatamente” sobre o total de mensagens especificado na questão)
+P(Problema) = 20/100 (Soma da quantidade mensagens que contêm a palavra "problema" sobre o total de mensagens especificado na questão) 
+P(Imediatamente) = 20/100 (Soma da quantidade mensagens que contém a palavra "imediatamente" sobre o total de mensagens especificado na questão)
 
 P(Urgente) = 30/100 (que é o total de mensagens urgentes sobre o nosso total de mensagens especificado na questão)
 P(Não-Urgente) = 70/100 (que é o total de mensagens não urgentes sobre o nosso total de mensagens especificado na questão)
@@ -72,7 +72,7 @@ A fórmula é:
 
 H(x) = -p1*log2(p1) -p2*log2(p2) …
 
-Onde os “p” se referem a probabilidade. Para ficar mais claro, vamos utilizar a fórmula com a partição unitária joga.
+Onde os "p" se referem a probabilidade. Para ficar mais claro, vamos utilizar a fórmula com a partição unitária joga.
 
 P(Joga=sim) = 7/14 (Quantidade de vezes jogadas sobre o total de jogos, será o nosso p1)
 P(Joga=não) = 7/14 (Quantidade de vezes jogadas sobre o total de jogos, será o nosso p2)
