@@ -1,0 +1,8 @@
+##<<1A>>##
+A falta de capacidade computacional dos computadores, falta de dados e os algoritmos.
+##<<1B>>##
+Nos dias atuais os computadores estão com capacidade computacional maiores, temos muito mais dados e as tecnicas de algoritmo são melhores. Se tornando uma excelente ferramenta.
+##<<2A>>##
+Para o treinamento teremos nossos dados rotulados com respostas conhecidas, onde queremos que o modelo aprenda os padrões para que, no momento que testaremos com dados desconhecidos ele tenha uma previsão correta. Apredizado supervisado se divide em classificação onde queremos dividir nossas amostras parecidas em classes, e regressão onde queremos prever um valor numerico continuo com base em outros valores. Diferente de não-supervisado, aqui temos agrupamento que busca amostras parecidas, Associação que mesmo sem ser parecidas, o modelo vai buscar algo que associe essas duas ou mais coisas, e sumarização, que é mais utlizada para texto onde ela separa os fragmentos.
+##<<2B>>##
+O modelo seria treinado para prever certos resultados. São os vieses que buscam a melhor hipotese para que o modelo tenha uma confiabilidade maior. Se seu modelo tiver uma hipotese fraca, os resultados não seram o melhor possivel.

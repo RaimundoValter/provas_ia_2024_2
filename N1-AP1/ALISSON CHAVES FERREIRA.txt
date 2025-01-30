@@ -1,0 +1,18 @@
+##<<1A>>##
+As redes neurais contribuiram fortemente no aprendizado de máquina por conta da capacidade de trabalhar com milhares de camadas e conseguir simular o complexo poder de tomada de decisão do cérebro humano através da manipulação de grandes quantidades de dados.
+Muito antes dos anos 2000 já haviam pesquisas e investimentos na área, porém esse avanços forma muitas vezes pausados tanto pela falta de poder de processamento como a ausência de conjunto de dados e algoritmos eficientes para esse trabalho. 
+Outro fato tirou a atenção de financiadores, que era a falsa ilusão de obter uma solução revolucionária, porém não haviam recursos disponíveis, o que culminava em pausas na pesquisa.
+##<<1B>>##
+As redes neurais contribuiram fortemente no aprendizado de máquina por conta da capacidade de trabalhar com milhares de camadas e conseguir simular o complexo poder de tomada de decisão do cérebro humano através da manipulação de grandes quantidades de dados.
+Se destacaram em diversas aplicações de inteligência artificial por conta de atualmente existir capacidade de processamento, tanto com GPUs como CPU.
+Outro aspecto é a enorme disposição de dados presentes na internet, e claro, depois de anos de pesquisa finalmente temos uma ferramenta funcional.
+##<<2A>>##
+O aprendizado supervisionado trabalha com o auxílio de um supervisor externo. Durante o trabalho a máquina recebe dados rotulados para treinamento e a saída é fornecida com base nesses dados de entrada. Com esse método podemos inclusive classificar novos dados.
+O supervisionado tabalha principalmente com variáveis alvo que podem ser discretas ou contínuas, que são os objetivos definidos para o algoritmo e variáveis independentes que são valores que ajudarão a encontrar o alvo no processo de treinamento.
+Existe também o não supervisionado, que não tem foco na rotulação dos dados, mas sim em similaridade e padrões, o que é o oposto de supervisionado.
+##<<2B>>##
+O aprendizado supervisionado trabalha com o auxílio de um supervisor externo. Durante o trabalho a máquina recebe dados rotulados para treinamento e a saída é fornecida com base nesses dados de entrada. Com esse método podemos inclusive classificar novos dados.
+A hipótese induzida são as funções ou ideias fracas que o aprendizado de máquina irá sugerir com base nos dados de treinamento identificando padrões e depois tomar decisões com base nesses padrões.
+Já o viés de representação limita o espaço de hipóteses do modelo a um escopo reduzido, mesmo com uma grande quantidade de dados.
+O viés de busca determina o caminho que o algoritmo deve seguir com base no conjunto de hipóteses. Esses viéses podem afetar, por exemplo, um algoritmo de detecção de viveiros.
+Se não for definido a possibilidade de hipótese e nem indicar o caminho o algoritmo nunca saberá qual o objetivo.

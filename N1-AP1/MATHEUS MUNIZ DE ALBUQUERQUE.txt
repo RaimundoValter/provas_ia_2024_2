@@ -1,0 +1,23 @@
+##<<1A>>##
+Naquela época a IA era tratada como pesquisa uma área teórica, ficando estaguinada por motivos de limitação de hardware (baixo poder de processamento) e pouca quantidade de dados disponivel.
+##<<1B>>##
+Com o avanço da tecnologia e a crescente e gradativa coleta de dados, a IA passou da area de pesquisa, para uma nova fase de inovação, a partir dai surgiu a oportunidade de colocar ideias em pratica, como soluções virando assim um produto/ferramentas.
+OBS: Um grande fator que destaca a importancia das redes neurais em ML é o aprendizado profundo, o uso de camadas de aprendizado que almenta o poder generativo.
+##<<2A>>##
+Podemos dizer que existem algumas etapas fundamentais:
+Coleta de dados -> dados rotulados e que tenham correlação com o objetivo do modelo.
+Pré-prossesamento -> para detectar, corrigir ou evitar ruidos, dados inconsistentes, ausentes...
+Distribuição de dados -> treinamento/teste.
+Treinamento do modelo -> Com conjunto de dados nunca vistos.
+Implementação do modelo -> finalizado e funcional.
+Utilizar um conjunto de dados já rotulados, para que o modelo aprenda, a partir disso gerar uma hipotese com a generalização do aprendizado com conjunto de dados distintos
+##<<2B>>##
+Podemos dizer que existem algumas etapas fundamentais:
+Coleta de dados -> dados rotulados e que tenham correlação com o objetivo do modelo.
+Pré-prossesamento -> para detectar, corrigir ou evitar ruidos, dados inconsistentes, ausentes...
+Distribuição de dados -> treinamento/teste.
+Treinamento do modelo -> Com conjunto de dados nunca vistos.
+Implementação do modelo -> finalizado e funcional.
+basicamente o modelo induz a variavel alvo, de acordo com os dados rotulados, com a ajuda de atributos independentes, teremos uma hipotese que mais se aproxima do esperado.
+VIES REPRESENTAÇÃO: Podemos imaginar um chef de cozinha, que tem uma receita de um bolo para fazer, porém ele deve escolher em qual forma ira utilizar, redonda, quadrada, de coração. Percebemos ai que dependendo da sua escolha, o bolo será representado de uma forma diferente, nos modcelos de ML não é diferente precisamos escolher qual forma/tecnica utilizar para alcançar a variavel alvo.
+VIES DE BUSCA: Agora podemos imaginar um supermercado, onde eu tenho uma lista de compras, tenho que definir qual estrategia irei utilizar para buscar meu objetivo que é encontrar 

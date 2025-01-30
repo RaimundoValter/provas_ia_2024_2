@@ -1,0 +1,8 @@
+##<<1A>>##
+A falta de poder de processamento computacional, falta de dados, expectativas irrealísta e algoritmos limitados.
+##<<1B>>##
+Atualmente com o avanço da tecnologia possibilitou o aumento do poder de processamento computacional como o surgimento das GPU’s, disponibilidade de grandes volumes de dados e aprimoramento dos algoritmos. Isso possibilitou com que as IA’s saíssem da pesquisa e passassem a ser ferramentas.
+##<<2A>>##
+No aprendizado de maquina supervisionado tem apresença de um supervisor externo que conhece todas as saídas desejadas podendo assim verificar se a hipotese induzida está prevendo corretamente as saídas. Nessa abordagem o supervisor pode ultilizar por exemplo variações dos dados usados para treino para testar se a hipotese induzida está prevendo corretamente as saídas. Se caso haja algum erro na previsão da saída de algum dado, o supervisor corrige essa saída e manda para o algoritmo treinar. Esse processo é repetido até que as saídas sejam corretas.
+##<<2B>>##
+O supervisor insere dados para treinar o algoritmo a reconhecer padrões ou relações entre as varíaveis de entrada e saída e assim ele de forma autonoma criar uma hipotese ou função que resolva ou realize previsão de problemas futuros.O viés de representação acaba limitando as hipoteses induzidas no espaço de hipoteses possíveis. Já o viés de Busca limita a forma de explorar soluções no espaço já limitado pelo viés de representação. Vamos tomar como exemplo um algoritmo que é necessario usar redes neurais se escolhermos um modelo de arvore de tomada de decisão como vies de representação, vai acabar limitando o viés de busca a hipoteses fracas para solução do problema.

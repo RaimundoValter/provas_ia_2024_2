@@ -1,0 +1,19 @@
+##<<1A>>##
+Dados (havia uma quantidade ínfima, que foi aumentada consideravelmente pela internet)
+Capacidade de Processamento (GPU’s)
+Algoritmos (Até haviam algoritmos, mas máquinas ainda não demandavam a robustez computacional)
+##<<1B>>##
+Se tornou fundamental pois hoje em dia se tornou uma ferramenta para auxiliar e se possível substituir trabalhos que demandavam inteligência humana.
+Isso só é possível graças a popularização da internet, que fez com que se criassem grandes quantidades de dados, e os avanços dos hardwares, que agora têm
+capacidade de processar os dados massantes e rodar os algoritmos robustos.
+##<<2A>>##
+O processo se dá em duas etapas:
+Treino: O algoritmo recebe um conjunto de dados mapeados (existe uma entrada, e anexada ela, uma saída esperada. O algoritmo processará os dados e tentará buscar uma regra por conta própria para associar as entradas e saídas.
+Teste: Dado um conjunto similar ao primeiro passado em treino mas em menor escala. O algoritmo usará a regra que ele decidiu ao fim da etapa de treino para testar se as entradas têm as saídas corretas (que o algoritmo tentou prever).
+Caso a taxa de acertos seja suficientemente boa para o problema, está pronto. Caso contrário, precisa de mais épocas de treino.
+E a diferença de supervisionado para não-supervisionado? Neste algoritmo, (supervisionado) a supervisão vem do próprio programador, pois ele quem dirá se a hipótese formulada é boa ou ruim, e se é necessário mais treinos. Isso não ocorre no não-supervisionado, onde a IA é quem decide se ela própria está suficientemente boa ou não.
+##<<2B>>##
+Hipótese Induzida: A regra/fórmula que o algoritmo cria para tentar relacionar as entradas com as saídas. Mudará ao longo do processo de treino até chegar na hipótese final.
+Viés de Representação: Definido como o espaço que se encontram as hipóteses 
+Viés de Busca: A forma de navegar nas hipóteses presentes no seu espaço do viés representativo.
+Como pode afetar a eficácia? Exemplo: Se eu tenho um algoritmo para achar a melhor forma de percorrer uma árvore, se eu uso uma árvore com 600 nós (viés de representação), e uso formas lineares para percorrer essa árvore (viés de busca), percorrendo nó por nó, custará enorme performance do meu algoritmo pela péssima definição do espaço e da forma de caminhar.

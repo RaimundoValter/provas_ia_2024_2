@@ -1,0 +1,8 @@
+##<<1A>>##
+A falta de dados e o poder de processamento eram baixos.
+##<<1B>>##
+Com o aumento da capacidade de processamento, a criação de GPUs e a quantidade de dados disponíveis, a inteligência artificial passou de apenas pesquisa para se tornar uma ferramenta.
+##<<2A>>##
+No aprendizado supervisionado são usados dados rotulados para o treinamento. O objetivo é fazer que o modelo aprenda com esses dados e que faça previsões corretas com dados que não foram usados antes.
+##<<2B>>##
+A hipótese induzida é a regra criada com base no treinamento para fazer previsões. Com o viés de busca e o viés de apresentação, é possível dizer a maneira de explorar as soluções e a escolha das características no treinamento. Com esses vieses o modelo é preparado para ter a melhor forma de procura e do que procurar.

@@ -1,0 +1,49 @@
+##<1a>##
+Porque, em aplicações reais, isso não é o caso. Assim, quando utilizamos o algoritmo Naive Bayes, estamos considerando que as variáveis de entrada não possuem dependência entre si (correlação importante) e essa suposição é ingênua para a maiora das aplicações.
+##<1b>##
+Utilizando a matriz de correlação, podemos identificar pares de variáveis que possuem correção importante (considerando um critério simples: acima de 0,8 ou abaixo de -0,8), assim, violaria a suposição de independência.
+##<1c>##
+Considerando que as variáveis A com D (correlação 0.85) e B com D (correlação 0.75) demonstram dependência importante, escolheria as variáveis A, B e C para compor o modelo utilizando o algoritmo Naive Bayes.
+##<1d>##
+Recomendaria o uso do algoritmo KDBC (K-Dependencies Bayes Chain) e a justificativa é a existência de atributos importantes relacionados ao problema de aprendizado de máquina em questão que possuem dependência entre si. Isto é, apenas escolher um dos atributos com alta correlação, teria impacto negativo na exatidão do modelo final, tendo em vista que excluiríamos algum atributo importante para a calssificação.
+##<2a>##
+Poderíamos montar diversos modelos Naive Bayes considerando a presença de certa combinação de sintomas. O modelo indicaria a maior probabilidade da classificação (dengue ou não dengue) dado a presença dos sintomas. Exemplo: Imageinando que o paciente apresentou os sintomas "Congestão Nasal" e "Manchas na Pele", utilizaríamos o modelo para calcular P(Dengue|"Congestão Nasal"&"Manchas na Pele"), bem como P(Não Dengue|"Congestão Nasal"&"Manchas na Pele"), escolhendo a classificação com maior probabilidade, dado a presença daqueles sintomas.
+##<2b>##
+Considerando os sintomas "Dor muscular" (Do), "Tosse persistente" (T) e "Manchas na pele" (M), poderíamos calcular as probabilidades p(D|Do&T&M) e p(ÑD|Do&T&M), decidindo pelo diagnóstico com maior probabilidade.
+p(D|Do&T&M)=(p(D)p(Do|D)p(T|D)p(M|D))/(p(Do)p(T)p(M))
+p(ÑD|Do&T&M)=(p(ÑD)p(Do|ÑD)p(T|ÑD)p(M|ÑD))/(p(Do)p(T)p(M))
+Podemos simplificar o problema para calculas apenas o numerador:
+p(D|Do&T&M)=p(D)p(Do|D)p(T|D)p(M|D)
+p(ÑD|Do&T&M)=p(ÑD)p(Do|ÑD)p(T|ÑD)p(M|ÑD)
+Como:
+p(D)=0.32
+p(ÑD)=0.68
+
+p(Do)=0.47
+p(T)=0.57
+p(M)=0.37
+
+p(D|Do)=0.58
+p(D|T)=0.40
+p(D|M)=0.69
+
+p(Do|D)=p(Do)p(D|Do)/p(D)=(0.47*0.58)/(0.32)=0.82
+p(T|D)=p(T)p(D|T)/p(D)=(0.57*0.40)/(0.32)=0.71
+p(M|D)=p(M)p(D|M)/p(D)=(0.37*0.69)/(0.32)=0.80
+
+p(ÑD|Do)=0.42
+p(ÑD|T)=0.60
+p(ÑD|M)=0.31
+
+p(Do|ÑD)=p(Do)p(ÑD|Do)/p(ÑD)=(0.47*0.42)/(0.68)=0.29
+p(T|ÑD)=p(Do)p(ÑD|Do)/p(ÑD)=(0.57*0.60)/(0.68)=0.50
+p(M|ÑD)=p(Do)p(ÑD|Do)/p(ÑD)=(0.37*0.31)/(0.68)=0.17
+
+Logo:
+
+p(D|Do&T&M)=p(D)p(Do|D)p(T|D)p(M|D)=0.32*0.82*0.71*0.80=0.15
+p(ÑD|Do&T&M)=p(ÑD)p(Do|ÑD)p(T|ÑD)p(M|ÑD)=0.68*0.29*0.50*0.17=0.01
+
+Considerando que a p(D|Do&T&M) > p(ÑD|Do&T&M), o diagnóstico mais provável é Dengue.
+
+

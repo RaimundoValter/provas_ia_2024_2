@@ -1,0 +1,29 @@
+##<<1A>>##
+Redes neuras tem sua importancia no aprendizado de maquina pois ajudou a se aprofundar mais neste assunto e o “Ai Winter” atrasou este processo.
+Poucos dados para processamento 
+Poder de processamento limitado
+Algoritmos muito complexos
+##<<1B>>##
+Redes neuras tem sua importancia no aprendizado de maquina pois ajudou a se aprofundar mais neste assunto e o “Ai Winter” atrasou este processo.
+GPU, que aumentou drasticamente a capacidade de processamento do aprendizado de maquina 
+E a grande disponibilidade de dados digitalizados por conta de mais uso da tecnologia digital e conectada, como celulares e a internet.
+##<<2A>>##
+I. Aquisição de um conjunto de entradas
+II. Rotulação das saidas esperadas das entradas
+III. Transforma os passos anteriores em um conjunto de treinamento
+IV. Tentar força a maquina a gerar uma regra geral aceitavel a cerca das hipoteses criadas no treinamento
+V. Criar cojunto de teste com dados nunca vistos
+VI. testar a regra criada com o conjunto de testes e validar
+O supervisionado tenta prever a saida de acordo com a entrada, ja como no não supervisionado ele tenta encontrar padroes em um grupo de dados ja definidos.
+##<<2B>>##
+I. Aquisição de um conjunto de entradas
+II. Rotulação das saidas esperadas das entradas
+III. Transforma os passos anteriores em um conjunto de treinamento
+IV. Tentar força a maquina a gerar uma regra geral aceitavel a cerca das hipoteses criadas no treinamento
+V. Criar cojunto de teste com dados nunca vistos
+VI. testar a regra criada com o conjunto de testes e validar
+- Hipotese induzida é a validação da capacidade da maquina de induzir hipoteses corretas usando a regra criada no treinamento so que usada em novos dados
+fornecidos.
+- Influenciam limitando o espaço das hipoteses em grupos e a forma de como é feito a pesquisa de dados nesse grupo.
+Como exemplo é a escolha de como organizar esses grupo como: No vies de representação é escolhido usar arvores de busca para os grupos e na busca escolher arvores com menos filhos.
+Dependendo da finalidade do algoritimo essa combinação pode ser eficiente ou não.

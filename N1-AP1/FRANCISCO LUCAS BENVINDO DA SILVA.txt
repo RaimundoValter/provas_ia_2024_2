@@ -1,0 +1,8 @@
+##<<1A>>##
+Apesar do grande potencial, as redes neurais foram deixadas em segundo plano por conta da ausência de poder de processamento e de dados, tanto em qualidade quanto em quantidade. Sendo estes dois artefatos fundamentais para se trabalhar com redes neurais.
+##<<1B>>##
+Atualmente, com os avanços tecnológicos na área de hardware, principalmente em relação as GPUs, e a grande quantidade de dados gerados por diversos setores, aliados a possibilidade de tornar as inteligências artificiais ferramenta ocorreu o renascimento da IA.
+##<<2A>>##
+O trabalho de aprendizado de máquina preditivo supervisionado é realizado baseando-se em um conjunto de dados, o qual é subdividido em um conjunto de treino e um conjunto de teste. O conjunto de treino é rotulado, havendo atributos de entrada e uma saída esperada, que é conhecida pelo supervisor, este, de certa forma "auxilia a máquina" guiando-a acerca das saídas. O objetivo deste tipo de trabalho é que o algoritmo consiga operar também com os dados não rotulados e outros conjuntos de dados.
+##<<2B>>##
+Hipótese induzida é a regra ou função que é induzida pelo algoritmo a partir de um conjunto de dados. É como um palpite do modelo sobre como os dados de um conjunto se comportam. Os vieses de representação e busca influenciam a eficácia do modelo ao restringir o espaço das hipótes e a maneira como o algoritmo navega pelo espaço restringido. O exemplo de como o vies afeta o desempenho do algoritmo seria utilizar árvores de decisão com muitos nós no algoritmo ID3, que tem como viés de busca justamente o posto, desse modo afetando seu desempenho.

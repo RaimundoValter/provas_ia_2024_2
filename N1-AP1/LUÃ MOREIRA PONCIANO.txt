@@ -1,0 +1,8 @@
+##<<1A>>##
+Neste periodo as inteligências artificiais existiam apenas como pesquisa. A falta de sua aplicação como produto criou um cenário de baixo interesse, sem competição ou inovação na àrea.
+##<<1B>>##
+O desenvolvimento de GPUs cada vez mais potentes forneceu à àrea das redes neuráis o poder computacional necessário para o seu uso efetivo. Além disso o cenário atual do mundo digital fornece uma quantidade antes inconcebivel de dados, que são um dos elementos fundamentais das redes neurais em funcionamento.
+##<<2A>>##
+O aprendizado supervisionado se caracteriza através da alimentação de dados com o proposito de alcançar um resultado o qual ja é conhecido o resultado correto que será avaliado como tal por um supervisor. Ele se difere dos demais na sua utilização de um surpervisor ativo.
+##<<2B>>##
+A hipotese induzida  é aquela onde os dados alimentados para treinar o sistema para alcançar um resultado específico ou seja, induzindo o sistema a uma hipotese. No exemplo de um sistema que deve corretamente apontar a cor de um semáforo, podemos utilizar do viés de representação para classificar as cores detectadas em grupos como amarelo, verde e vermelho. Podemos também o viés de busca para definir como encontrar as classificações, usando por exemplo RGB como valores de detecção. Usando de ambos o sistemas se tornam mais organizados e eficientes.

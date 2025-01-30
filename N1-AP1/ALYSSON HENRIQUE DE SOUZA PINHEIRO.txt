@@ -1,0 +1,8 @@
+##<<1A>>##
+Durante o AI Winter a falta de poder de processamento, de dados para treinamento e o fato de muitos algoritmos ainda estarem em pesquisa fizeram com que a IA não atingisse os resultados esperados por investidores e fosse deixada de lado.
+##<<1B>>##
+Esse renascimento acontece devido a grandes avanços na área, especialmente no desenvolvimento de ferramentas com os algoritmos já existentes, a criação e avanço de novas tecnologias na area de hardware como gpus com alta capacidade de processamento e uma quantidade de dados superior com o advento da big data, esses fatores em conjunto permitem que seja aplicadas redes neurais onde antes era inviável seja por limitações de hardware, dados ou de desenvolvimento.
+##<<2A>>##
+Aprendizado de maquina supervisionado é realizado com um conjunto de dados pre rotulado e seu resultado já é um valor esperado
+##<<2B>>##
+Hipótese induzida é a forma como o algoritmo processa os dados para produzir um resultado, viéz de busca e de representação aplicam limites na quantidade de hipóteses que o modelo pode chegar e em como ele pode navegar pelas possíveis hipóteses, dois algoritmos um trabalha com arvore de decisões e outro com redes neurais ao tentar resolver um problema chegarão a diferentes hipóteses devido aos vieses.
