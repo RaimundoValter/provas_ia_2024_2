@@ -1,0 +1,84 @@
+##<<1A>>##
+Em um problema de arvore de decisão o ganho de informação é uma boa forma de regra de divisão para classificação, onde ele é essencial para escolher que partição seguir. O ganho de informação tem como conceito fundamento o calculo de Entropia que mede a aleatoriedade das variáveis. Ou seja, quanto maior a entropia mais misturadas serão os dados. Por exemplo, Se pegarmos o atributo graduação e calcular o seu ganho de informação através do cálculo de entropia obtendo a probabilidade dos candidatos graduados aceitos e rejeitados e os candidatos não graduados aceitos e rejeitados e calcular a entropia de cada um (graduado e não graduado) e depois calcular a entropia geral do atributo graduação através do seguinte calculo (H(G) = P(CG)*H(CG)+P(SG)*H(SG)) e por fim calcular o ganho de informação através do seguinte calculo (IG(G) = H(I)-H(G)) o resultado obtido vai ser comparado com outros IG dos demais atributos e verificado se esse atributo é ideal ou não para a resolução do problema. 
+
+##<<1B>>##
+Considerando a entropia inicial como H(I), entropia de experiência como H(E), Probabilidade dos candidatos Serem aceitos (A), Probabilidade dos candidatos serem Rejeitados como P(R), entropia dos candidatos com experiência H(CE), entropia candidatos sem experiência como H(SE) e Ganho de informação como IG(x), sendo x a variável que eu quero calcular. 
+
+H(I) = 0,94;
+
+Primeiramente calcular os candidatos com experiência, total é 49 candidatos (0,49). 
+ P(A)= 0,42/0,49;
+ P(R)= 0,07/0,49;
+ 
+ H(CE) = -(0,42/0,49)*log2 (0,42/0,49) - (0,07/0,49)*log2(0,07/0,49) = 
+	 -(0,857142857)*(−0,222392422) - (0,142857143)*(−2,807354921) = 
+	   0,190622076 + 0,401050703 = 0,591672779 bits.
+	   
+Agora vamos calcular os candidatos sem experiência, total é 90 candidatos (0.90). 
+P(A)= 0.12/0.90;
+P(R)= 0.78/0.90;
+
+H(SE) = -(0,12/0,90)*log2 (0,12/0,90) - (0,78/0.90)*log2(0,78/0.90) = 
+	-(0,133333333)*(−2,906890599) - (0,866666667)*(−0,206450877) = 
+	  0,387585412 +  0,178924093 = 0,566509505 bits.
+	  
+Depois de obter as duas entropias o próximo passo é calcular a entropia geral do atributo experiência. 
+H(E) = 0,49*0,591672779 + 0,90*0,566509505 = 
+H(E) = 0,799778216;
+
+H(E) então tem o valor aproximadamente 0,80.
+
+Para finalizar iremos calcular o IG (E), ganho de informação do atributo experiencia. 
+
+IG(E) = 0,94 - 0,80 = 
+IG(E) = 0,14;
+
+Podemos analisar pelo resultado obtido através dos cálculos que o ganho de informação obtido é mínimo, caso esse atributo tem um IG menor que outros atributos então significa que ele não é a escolha ideal para se trabalha com o problema.
+
+##<<2>>##
+Primeiro iremos calcular a probabilidade de se ele compra ou não o produto. 
+
+P(C) é a probabilidade de comprar e P(N) é a probabilidade de não comprar.
+
+P(C) = 80/200 =
+P(C) = 0,4;
+
+P(N) = 120/200 =
+P(N) = 0,6;
+
+Agora vamos calcular a probabilidade (verosemelhança) das características.
+
+P(L/C) é de se o cliente comprou com o tempo na página sendo curto e P(L/N) é de se o cliente não comprou com o tempo na página sendo curto. 
+
+P(L/C) = 0,60/0,40 = 1,5
+
+P(L/N) = 0,30/0,60 = 0,5
+
+P(D/C) é de se o cliente comprou o Dispositivo sendo Desktop e P(D/N) é de se o cliente não comprou o Dispositivo sendo Desktop. 
+
+P(D/C) = 0,50/0,40 = 1,25
+
+P(D/N) = 0,50/0,60 = 0,833333333
+
+P(O/C) é de se o cliente comprou com a Origem do tráfego sendo Orgânico e P(O/N) é de se o cliente não com a Origem do tráfego sendo Orgânico. 
+
+P(O/C) = 0,40/0,40 = 1
+
+P(O/N) = 0,40/0,60 = 0,666666667
+
+Agora vamos obter a probabilidade de cada uma das características. 
+
+P(L) =  1,5*0,40 + 0,5*0,60 = 0,90
+P(D) = 1,25*0,40 + 0,60*0,833333333 = 1
+P(O) = 1*0,40 + 0,666666667*0,60 = 0,80
+
+Calculo final P(C/L,D,O) é probabilidade de o cliente comprar sendo o tempo na página longo, o dispositivo sendo Descktop e a origem do tráfego sendo Orgânico e P(N/L,D,O) é probabilidade do cliente não comprar sendo o tempo na página longo, o dispositivo sendo Descktop e a origem do tráfego sendo Orgânico.
+
+P(C/L,D,O) = (0,40*1,5*1,25*1)/(0,90*1*0,80) =1,041
+ 
+P(N/L,D,O) = (0,60*0,5*0,83*0,66)/(0,90*1*0,80) = 0,22825
+
+Dado aos resultados obtidos podemos concluir que o cliente tem mais probabilidade de comprar o produto. 
+
+
+

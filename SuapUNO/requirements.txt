@@ -1,0 +1,5 @@
+groq
+reportlab
+PyPDF2
+scipy
+numpy

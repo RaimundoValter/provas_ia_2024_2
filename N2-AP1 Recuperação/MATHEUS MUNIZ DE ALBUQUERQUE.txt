@@ -1,0 +1,56 @@
+##<<1A>>##
+Para que a empresa consiga fazer uma arvore de decisão robusta, evitando o overfitting, temos que reduzir a profundidade da arvore, definir um criterio de parada!
+Entropia = medimos a inceteza e a desordem dos dados; 
+Ganho de informação = calcula a redução dessa incerteza da entropia ao dividir os dados com base no atributo;
+Tendo em vista isso, o atributo com o maior Ganho de informação, será escolhido como raiz da árvore de decisão, pois ele oferece a melhor separação dos dados, reduzindo a incerteza de forma mais eficiente. 
+##<<1B>>##
+entropia inicial = 0,94
+Formula entropia:-P(A)xlog2xP(A)-P(B)xlog2xP(B)
+
+candidatos com experiência:
+aceitos:42;
+regjeitados:7;
+total: 49;
+
+p(aceito) = 42/49 = 0,8571
+p(rejeitado) = 7/49 = 0,1428 
+
+-0,8571 x log2 x 0,8571 - 0,1428 x log2 x 0,1428 = -0.231
+
+Candidatos sem experiencia:
+aceitos:12;
+regjeitados:78;
+total:90;
+
+p(aceito) = 12/90 = 0,1333
+p(rejeitado) = 78/90 = 0,8666
+
+-0,1333xlog2x0,1333-0,8666xlog2x0,8666 = -0.227 
+
+
+##<<2>>##
+Para prever se um novo usuario comprará ou não um produto após visualizar a página do produto,
+levando em consideração as caracteristicas: 
+
+Tempo na Página = Longo; 
+Dispositivo = Desktop; 
+Origem do Tráfego = Orgânico;
+Temos os seguintes calculos:
+
+P(Compra) = 80/200 = 0,4
+P(Não Compra) = 120/200 = 0,6
+
+P(Longo|Compra) = 60/80 = 0,75
+P(Longo|Não Compra) = 30/120 = 0,25
+P(Dektop|Compra) = 50/80 = 0,625
+P(Dektop|Não Compra) = 50/120 = 0,5
+P(Orgânico|Compra) = 40/80 = 0,5
+p(Orgânico|Não Compra) = 40/120 = 0,33
+
+P(Longo|Compra) x P(Dektop|Compra) x P(Orgânico|Compra) = 0,75 x 0,625 x 0,5 x 0,4 = 0,093
+P(Longo|Não Compra) x P(Dektop|Não Compra) x P(Orgânico|Não Compra) = 0,25 x 0,5 x 0,33 x 0,6 = 0,024
+
+Logo, a probabilidade de um novo usuario comprar ou não comprar é:
+
+Comprar = 0,093/(0,093+0,024) = 0,79(79%)
+Não Comprar = 0,024/(0,024+0,093) = 0,20(20%) 

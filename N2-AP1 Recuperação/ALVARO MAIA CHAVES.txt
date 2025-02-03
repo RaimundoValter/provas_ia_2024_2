@@ -1,0 +1,64 @@
+##<<1a>>##
+A entropia serve para saber se um conjunto de dados sera facilmente classificavel ou seja uma entropia alta significa que o conjunto de dados é dificil classificar os dados pois há muitas classes diferentes, ja uma entropia baixa significa uma facilidade ao classificar ja que representa uma quantidade de dados concentrada em poucas classes.
+Assim utilizando a formula da entropia H(a)=-P(a1)*log2(P(a2))-P(a1)*log2(P(a2)) possibilita calcular a entropia inicial do conjunto e logo depois a entropia de cada atributo. Apos isso é calculado a entropia media final com os resultados dos calculos anteriores para enfim poder calcular o ganho de informação com a entropia inicial ou seja Ganho=H(inicial)-h(media final), mostrando assim qual atributo é a melhor escolha para aquela raiz.
+
+##<<1b>>##
+Como ja foi dada a entropia inicial, não há a necessidade de calculá-la
+H(inicial)=0,94
+
+Considerando: Com Experiencia = E, Sem experiencia = SE, Aceito = A e Rejeitado= R
+
+H(E|A) = 42
+H(E|R) = 7
+
+H(E|A) = - P(E|A)*log2(P(E|A)) - P(E|R)*log2(P(E|R))
+H(E|A) = -(42/49)*log2(42/49) -(7/49)*log2(7/49)
+H(E|A) = -0,86*-0,22 -0,14*-2,80
+H(E|A) = 0,19 + 0,392
+H(E|A) = 0,582
+
+H(SE|A) = 12
+H(SE|R) = 78
+
+H(SE|A) = - P(SE|A)*log2(P(SE|A)) - P(SE|R)*log2(P(SE|R))
+H(SE|A) = -(12/90)*log2(12/90) -(78/90)*log2(78/90)
+H(SE|A) = -0,13*-2,90 -0,86*-0,206
+H(SE|A) = 0,337 + 0,177
+H(SE|A) = 0,554
+
+Agora a entropia media final
+
+Ja que 42+7+12+78 = 139 é o numero total de canditados nesse conjunto, então
+
+H(E) = (49/139)*0,582 + (90/139)*0,554
+H(E) = 0,564
+
+Para calcular agora o ganho de informação temos,
+H(A) = H(inicial) - h(media final)
+H(A) = 0,94 - 0,564
+H(A) = 0,376
+
+Assim temos um ganho de informação de 0,376 oque mostra que com o atributo experiencia existe uma certa influencia de 0,376 na hora de se definir um cadidato como aceito ou rejeitado.
+
+##<<2>>##
+Considerando: Compraram = C, Não Compraram = NC, Longo = L, Desktop = D e Organico = O
+
+P(C) = 80/200 = 0,4
+P(NC) = 120/200 = 0,6
+
+P(L|C) = 60/80 = 0,75
+P(L|NC) = 30/120 = 0,25
+
+P(D|C) = 50/80 = 0,625
+P(D|NC) = 50/120 = 0,41
+
+P(O|C) = 40/80 = 0,5
+P(O|NC) = 40/120 = 0,33
+
+P(C|L&D&O) = P(C)*P(L|C)*P(D|C)*P(O|C)
+P(C|L&D&O) = 0,4*0,75*0,625*0,5
+P(C|L&D&O) = 0,09375
+
+P(NC|L&D&O) = P(NC)*P(L|NC)*P(D|NC)*P(O|NC)
+P(NC|L&D&O) = 0,6*0,25*0,41*0,33
+P(NC|L&D&O) = 0,020295

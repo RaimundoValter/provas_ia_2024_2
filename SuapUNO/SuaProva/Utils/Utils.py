@@ -1,5 +1,23 @@
 import os
 import re
+import time
+from groq import Groq
+from PyPDF2 import PdfWriter
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import letter
+import io
+import numpy as np
+from scipy.stats import zscore
+import os
+import re
+import ast
+from pprint import pprint
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+from textwrap import wrap
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import SimpleDocTemplate, Paragraph
+from reportlab.lib.units import inch
 
 def recupera_avaliacoes(nome_pasta):
     """

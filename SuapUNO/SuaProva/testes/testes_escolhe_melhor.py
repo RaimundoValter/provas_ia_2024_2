@@ -24,5 +24,7 @@ try:
   nota_final, correcao_final = escolhe_melhor(teantativa_correcao_teste)
   print(f"Nota final: {nota_final:.2f}")
   print(f"Correção final: {correcao_final}")
+  input("Digite algo para continua...")
 except ValueError as e:
   print(f"Erro: {e}")
+  input("Digite algo para continua...")
